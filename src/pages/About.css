@@ -1,0 +1,67 @@
+.about-page {
+  min-height: 100vh;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #1a4d99 100%);
+  color: white;
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.mission-section {
+  padding: 100px 0;
+  background: var(--background-light);
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-content h2 {
+  margin-bottom: 30px;
+}
+
+.mission-content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+.stats-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.stat-card h3 {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin: 0;
+}
