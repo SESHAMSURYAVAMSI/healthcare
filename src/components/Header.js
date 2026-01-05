@@ -10,8 +10,20 @@ function Header() {
       <div className="container">
         <div className="header-content">
           <Link to="/" className="logo">
-            <span className="logo-text">SAASCRAFT</span>
-            <span className="logo-subtitle">Healthcare Solutions</span>
+            <div className="logo-container">
+              {/* Using logo from public folder */}
+              <img 
+                src="/logo.jpeg" 
+                alt="Saascraft Logo" 
+                className="logo-image"
+                width="90"
+                height="90"
+              />
+              <div className="logo-text-container">
+                {/* <span className="logo-text">SAASCRAFT</span> */}
+                <span className="logo-subtitle">Healthcare Solutions</span>
+              </div>
+            </div>
           </Link>
           
           <button 

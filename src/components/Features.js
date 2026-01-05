@@ -38,13 +38,15 @@ function Features() {
   return (
     <section className="features-section">
       <div className="container">
-        <div className="section-header">
+        <div className="section-header fade-in">
           <h2>Why Choose Saascraft Healthcare?</h2>
           <p>Our platform is designed specifically for modern healthcare needs</p>
         </div>
         <div className="features-grid">
           {features.map((feature, index) => (
-            <div key={index} className="feature-card">
+            <div key={index} 
+            className="feature-card fade-in hover-left"
+            style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="feature-icon">{feature.icon}</div>
               <h3>{feature.title}</h3>
               <p>{feature.description}</p>

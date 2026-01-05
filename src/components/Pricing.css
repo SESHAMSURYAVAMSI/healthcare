@@ -1,0 +1,217 @@
+.pricing-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e8f4ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.billing-toggle {
+  display: inline-flex;
+  background: white;
+  padding: 5px;
+  border-radius: 50px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  border: 2px solid var(--border-color);
+}
+
+.toggle-btn {
+  padding: 12px 30px;
+  border: none;
+  background: transparent;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.toggle-btn.active {
+  background: var(--primary-color);
+  color: white;
+  box-shadow: 0 5px 20px rgba(42, 110, 204, 0.3);
+}
+
+.discount-badge {
+  background: var(--secondary-color);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 60px auto 0;
+}
+
+.pricing-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border: 2px solid transparent;
+}
+
+.pricing-card:hover {
+  transform: translateY(-20px);
+  border-color: var(--plan-color);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.popular {
+  transform: scale(1.05);
+  border: 2px solid var(--plan-color);
+}
+
+.pricing-card.popular:hover {
+  transform: scale(1.05) translateY(-20px);
+}
+
+.popular-badge {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: var(--plan-color);
+  color: white;
+  padding: 8px 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transform: rotate(45deg);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.plan-header h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: var(--plan-color);
+}
+
+.plan-description {
+  color: var(--text-light);
+  margin-bottom: 25px;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.currency {
+  font-size: 1.5rem;
+  color: var(--plan-color);
+  font-weight: 600;
+}
+
+.amount {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--text-color);
+  line-height: 1;
+}
+
+.period {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 40px 0;
+}
+
+.plan-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+}
+
+.plan-features li:hover {
+  transform: translateX(10px);
+  color: var(--plan-color);
+}
+
+.feature-check {
+  color: var(--plan-color);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.plan-cta {
+  width: 100%;
+  padding: 18px;
+  background: var(--plan-color);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.7s;
+}
+
+.plan-cta:hover::before {
+  left: 100%;
+}
+
+.plan-cta:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Animated background elements */
+.pricing-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(42, 110, 204, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 90% 80%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+  animation: gradientShift 15s ease infinite;
+  z-index: 0;
+}
+
+.pricing-section .container {
+  position: relative;
+  z-index: 1;
+}
